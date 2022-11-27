@@ -20,7 +20,7 @@ public class FaqAccordionValues {
     //*****Элементы-переменные "гармошки" с FAQ*****
     private String accordionButtonLocator = ".//div[@id='accordion__heading-%s']";
 
-    private String accordionPanelLocator = ".//div[@id='accordion__panel-%s']";
+    private String accordionPanelLocator = ".//div[@id='accordion__panel-%s']/p";
 
     public String[] accordionIndexArray = {"0", "1", "2", "3", "4", "5", "6", "7"};
 ;
@@ -45,6 +45,6 @@ public class FaqAccordionValues {
     //Читаем текст ответа
     public String getAccordionText(int n) {
         String accordionAnswerLocator = String.format(accordionPanelLocator, accordionIndexArray[n]);
-        return driver.findElement(By.xpath(accordionAnswerLocator)).getText();
+        return driver.findElement(By.xpath(accordionAnswerLocator)).getAttribute("innerHTML");
     }
 }
