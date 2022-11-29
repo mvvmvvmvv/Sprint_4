@@ -2,11 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class RentFormPersonal {
 
@@ -23,7 +18,6 @@ public class RentFormPersonal {
     //Станция метро
     private By metro = By.xpath(".//input[@placeholder='* Станция метро']");
     private By divListHack = By.xpath(".//div[@class='select-search__select']");
-    private By metroDropdown = By.xpath(".//div[@class='select-search__select']");
     //Телефон
     private By telephone = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
     //Кнопка "Далее"

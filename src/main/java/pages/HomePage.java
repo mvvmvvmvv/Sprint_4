@@ -1,6 +1,5 @@
 package pages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +16,6 @@ public class HomePage {
     private By orderButtonInHeader = By.xpath(".//button[@class='Button_Button__ra12g']");
     //Большая кнопка заказа посреди страницы
     private By orderButtonBig = By.xpath(".//button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']");
-
 
     //*****Конструктор*****
     public HomePage (WebDriver driver) {

@@ -41,7 +41,7 @@ public class TestHappyPath {
         this.deliveryDate = deliveryDate;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Test data: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}")
     public static Object[][] inputData() {
         return new Object[][] {
                 {"Николай", "Расторгуев", "Петровка, 38", "Таганская", "89112128506", 3, "Black", "Атас!", "31.12.2022"},
@@ -88,7 +88,4 @@ public class TestHappyPath {
     public void teardown() {
         driver.quit();
     }
-
-
-
 }

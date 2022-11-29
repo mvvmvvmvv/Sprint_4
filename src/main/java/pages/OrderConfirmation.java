@@ -25,7 +25,6 @@ public class OrderConfirmation {
     }
 
     //*****Методы*****
-
     //Нажать "Да"
     public void clickYes() {
         basePage.click(confirmButton);
@@ -41,5 +40,4 @@ public class OrderConfirmation {
         String expectedButtonName = "Посмотреть статус";
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.textToBePresentInElementLocated(confirmationMessage, expectedButtonName));
     }
-
 }

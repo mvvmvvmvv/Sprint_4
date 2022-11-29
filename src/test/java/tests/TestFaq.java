@@ -7,11 +7,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.FaqAccordionValues;
-import pages.HomePage;
-
-import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,7 +23,7 @@ public class TestFaq {
         this.expectedText = expectedText;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Индекс элемента: {0}, текст ответа: {1}")
     public static Object[][] compareTextData() {
         return new Object[][] {
                 {0, "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},
@@ -45,10 +41,8 @@ public class TestFaq {
     public void checkAllFaqItems() {
         driver = new ChromeDriver();
         FaqAccordionValues objFaqAccordion = new FaqAccordionValues(driver);
-
         driver.get("https://qa-scooter.praktikum-services.ru/");
         driver.manage().window().maximize();
-        //new WebDriverWait(driver, Duration.ofSeconds(20));
 
         objFaqAccordion.clickAccordionItem(index);
         String actualText = objFaqAccordion.getAccordionText(index);
@@ -60,5 +54,4 @@ public class TestFaq {
     public void teardown() {
         driver.quit();
     }
-
 }

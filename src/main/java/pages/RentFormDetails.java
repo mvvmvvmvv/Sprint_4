@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
-
 public class RentFormDetails {
 
     //*****Переменные*****
@@ -24,6 +22,7 @@ public class RentFormDetails {
     //Поля выбора цвета
     private By checkboxBlack = By.id("black");
     private By checkboxGrey = By.id("grey");
+
     //Поле комментария
     private By comment = By.xpath(".//input[@placeholder='Комментарий для курьера']");
     //Кнопки "Заказать" и "Назад"
@@ -71,5 +70,4 @@ public class RentFormDetails {
     public void goBack() {
         basePage.click(backButton);
     }
-
 }

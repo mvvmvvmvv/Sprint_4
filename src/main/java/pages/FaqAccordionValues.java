@@ -7,28 +7,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 import java.time.Duration;
 
 public class FaqAccordionValues {
 
     //*****Переменные*****
     private WebDriver driver;
-    private WebDriverWait wait;
-    private BasePage basePage;
 
     //*****Элементы-переменные "гармошки" с FAQ*****
     private String accordionButtonLocator = ".//div[@id='accordion__heading-%s']";
-
     private String accordionPanelLocator = ".//div[@id='accordion__panel-%s']/p";
-
     public String[] accordionIndexArray = {"0", "1", "2", "3", "4", "5", "6", "7"};
 ;
     //*****Конструктор*****
     public FaqAccordionValues (WebDriver driver) {
         this.driver = driver;
     }
-
 
     //Открываем элемент "гармошки"
     public void clickAccordionItem(int n) {
